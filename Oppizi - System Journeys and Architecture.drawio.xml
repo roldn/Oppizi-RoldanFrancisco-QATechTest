@@ -1,0 +1,601 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36" version="29.2.3">
+  <diagram name="Página-1" id="4smxqC-uBpVktO55piHH">
+    <mxGraphModel dx="1268" dy="888" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="rvBul70Y9NGTP6B8wIIJ-3" parent="1" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=20;fontStyle=1;" value="Oppizi – System Component Interaction Overview" vertex="1">
+          <mxGeometry height="40" width="520" x="3198" y="392" as="geometry" />
+        </mxCell>
+        <mxCell id="rvBul70Y9NGTP6B8wIIJ-4" parent="1" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=13;" value="&lt;font&gt;Integration points across Journey 1 (Campaign Creation) and Journey 2 (Agent Flyer Scan)&lt;/font&gt;" vertex="1">
+          <mxGeometry height="25" width="540" x="3188" y="424" as="geometry" />
+        </mxCell>
+        <mxCell id="rvBul70Y9NGTP6B8wIIJ-5" parent="1" style="swimlane;startSize=28;fillColor=#F3F4F6;strokeColor=#9CA3AF;fontStyle=1;fontSize=12;fontColor=#374151;dashed=1;arcSize=4;align=right;spacingLeft=0;spacingRight=12;strokeWidth=0.5;opacity=30;" value="Client Layer" vertex="1">
+          <mxGeometry height="130" width="980" x="2968" y="468" as="geometry" />
+        </mxCell>
+        <mxCell id="rvBul70Y9NGTP6B8wIIJ-6" parent="rvBul70Y9NGTP6B8wIIJ-5" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8EAF6;strokeColor=#3F51B5;fontSize=12;fontColor=#1A237E;arcSize=10;opacity=50;" value="&lt;b&gt;Campaign Dashboard&lt;/b&gt;&lt;br&gt;Admin UI · web" vertex="1">
+          <mxGeometry height="70" width="220" x="50" y="45" as="geometry" />
+        </mxCell>
+        <mxCell id="rvBul70Y9NGTP6B8wIIJ-7" parent="rvBul70Y9NGTP6B8wIIJ-5" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8EAF6;strokeColor=#3F51B5;fontSize=12;fontColor=#1A237E;arcSize=10;opacity=50;" value="&lt;b&gt;Field Agent App&lt;/b&gt;&lt;br&gt;Mobile · QR scanner" vertex="1">
+          <mxGeometry height="70" width="220" x="720" y="43" as="geometry" />
+        </mxCell>
+        <mxCell id="rvBul70Y9NGTP6B8wIIJ-8" parent="1" style="swimlane;startSize=28;fillColor=#F5F3FF;strokeColor=#7C3AED;fontStyle=1;fontSize=12;fontColor=#4C1D95;dashed=1;arcSize=4;align=right;spacingLeft=0;spacingRight=12;strokeWidth=0.5;opacity=30;" value="API / Gateway Layer" vertex="1">
+          <mxGeometry height="120" width="980" x="2968" y="638" as="geometry" />
+        </mxCell>
+        <mxCell id="rvBul70Y9NGTP6B8wIIJ-9" parent="rvBul70Y9NGTP6B8wIIJ-8" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EDE7F6;strokeColor=#7B1FA2;fontSize=12;fontColor=#4A148C;arcSize=10;opacity=50;" value="&lt;b&gt;Campaign API&lt;/b&gt;&lt;br&gt;Creation · management" vertex="1">
+          <mxGeometry height="70" width="220" x="50" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="rvBul70Y9NGTP6B8wIIJ-10" parent="rvBul70Y9NGTP6B8wIIJ-8" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EDE7F6;strokeColor=#7B1FA2;fontSize=12;fontColor=#4A148C;arcSize=10;opacity=50;" value="&lt;b&gt;Agent API&lt;/b&gt;&lt;br&gt;Scan submission" vertex="1">
+          <mxGeometry height="70" width="220" x="720" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="rvBul70Y9NGTP6B8wIIJ-11" parent="1" style="swimlane;startSize=28;fillColor=#F0FDF4;strokeColor=#15803D;fontStyle=1;fontSize=12;fontColor=#14532D;dashed=1;arcSize=4;labelBorderColor=none;align=right;spacingLeft=0;spacingRight=12;strokeWidth=0.5;opacity=30;" value="Data Services" vertex="1">
+          <mxGeometry height="130" width="980" x="2968" y="808" as="geometry" />
+        </mxCell>
+        <mxCell id="rvBul70Y9NGTP6B8wIIJ-12" parent="rvBul70Y9NGTP6B8wIIJ-11" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E0F2F1;strokeColor=#00796B;fontSize=12;fontColor=#004D40;arcSize=10;opacity=50;" value="&lt;b&gt;Geo Service&lt;/b&gt;&lt;br&gt;Areas · geofence" vertex="1">
+          <mxGeometry height="70" width="200" x="60" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="rvBul70Y9NGTP6B8wIIJ-13" parent="rvBul70Y9NGTP6B8wIIJ-11" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF8E1;strokeColor=#F57F17;fontSize=12;fontColor=#E65100;arcSize=10;opacity=50;" value="&lt;b&gt;QR Service&lt;/b&gt;&lt;br&gt;Pool · validation" vertex="1">
+          <mxGeometry height="70" width="200" x="280" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="rvBul70Y9NGTP6B8wIIJ-14" parent="rvBul70Y9NGTP6B8wIIJ-11" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E0F2F1;strokeColor=#00796B;fontSize=12;fontColor=#004D40;arcSize=10;opacity=50;" value="&lt;b&gt;Route Optimizer&lt;/b&gt;&lt;br&gt;Assignment logic" vertex="1">
+          <mxGeometry height="70" width="200" x="510" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="rvBul70Y9NGTP6B8wIIJ-15" parent="rvBul70Y9NGTP6B8wIIJ-11" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E3F2FD;strokeColor=#1565C0;fontSize=12;fontColor=#0D47A1;arcSize=10;opacity=50;" value="&lt;b&gt;Audit Log&lt;/b&gt;&lt;br&gt;Scan events · async" vertex="1">
+          <mxGeometry height="70" width="200" x="730" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="rvBul70Y9NGTP6B8wIIJ-16" parent="1" style="swimlane;startSize=28;fillColor=#FFF7F0;strokeColor=#C2410C;fontStyle=1;fontSize=12;fontColor=#7C2D12;dashed=1;arcSize=4;align=right;spacingLeft=0;spacingRight=12;strokeWidth=0.5;opacity=30;" value="Storage / Reporting" vertex="1">
+          <mxGeometry height="130" width="980" x="2968" y="978" as="geometry" />
+        </mxCell>
+        <mxCell id="rvBul70Y9NGTP6B8wIIJ-18" parent="rvBul70Y9NGTP6B8wIIJ-16" style="shape=cylinder3;whiteSpace=wrap;html=1;fillColor=#FCE4EC;strokeColor=#C62828;fontSize=12;fontColor=#B71C1C;direction=south;opacity=50;" value="&lt;b&gt;Delivery Log DB&lt;/b&gt;&lt;br&gt;Scan entries" vertex="1">
+          <mxGeometry height="75" width="200" x="430" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="rvBul70Y9NGTP6B8wIIJ-17" parent="rvBul70Y9NGTP6B8wIIJ-16" style="shape=cylinder3;whiteSpace=wrap;html=1;fillColor=#FCE4EC;strokeColor=#C62828;fontSize=12;fontColor=#B71C1C;direction=south;opacity=50;" value="&lt;b&gt;Campaign DB&lt;/b&gt;&lt;br&gt;Metadata · status" vertex="1">
+          <mxGeometry height="75" width="200" x="70" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="rvBul70Y9NGTP6B8wIIJ-30" edge="1" parent="rvBul70Y9NGTP6B8wIIJ-16" source="rvBul70Y9NGTP6B8wIIJ-18" style="endArrow=block;endFill=1;strokeColor=#1565C0;strokeWidth=1.5;dashed=1;fontSize=10;fontColor=#0D47A1;" target="rvBul70Y9NGTP6B8wIIJ-19" value="feed">
+          <mxGeometry relative="1" x="-0.1111" y="8" as="geometry">
+            <mxPoint y="1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rvBul70Y9NGTP6B8wIIJ-19" parent="rvBul70Y9NGTP6B8wIIJ-16" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E3F2FD;strokeColor=#1565C0;fontSize=12;fontColor=#0D47A1;arcSize=10;opacity=50;" value="&lt;b&gt;Reporting Engine&lt;/b&gt;&lt;br&gt;Aggregates metrics" vertex="1">
+          <mxGeometry height="75" width="220" x="720" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="rvBul70Y9NGTP6B8wIIJ-20" edge="1" parent="1" source="rvBul70Y9NGTP6B8wIIJ-6" style="endArrow=block;endFill=1;strokeColor=#7B1FA2;strokeWidth=2;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="rvBul70Y9NGTP6B8wIIJ-9" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rvBul70Y9NGTP6B8wIIJ-22" edge="1" parent="1" source="rvBul70Y9NGTP6B8wIIJ-9" style="endArrow=block;endFill=1;strokeColor=#00796B;strokeWidth=1.5;fontSize=10;fontColor=#004D40;" target="rvBul70Y9NGTP6B8wIIJ-12" value="validateArea()">
+          <mxGeometry relative="1" x="-0.2" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rvBul70Y9NGTP6B8wIIJ-24" edge="1" parent="1" source="rvBul70Y9NGTP6B8wIIJ-9" style="endArrow=block;endFill=1;strokeColor=#00796B;strokeWidth=1.5;fontSize=10;fontColor=#004D40;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0.3;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" value="getRoutes()">
+          <mxGeometry relative="1" x="-0.1782" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points" />
+            <mxPoint x="3278" y="696.79" as="sourcePoint" />
+            <mxPoint x="3577.56" y="846" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rvBul70Y9NGTP6B8wIIJ-32" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F9FAFB;strokeColor=#D1D5DB;" value="" vertex="1">
+          <mxGeometry height="90" width="360" x="3068" y="1128" as="geometry" />
+        </mxCell>
+        <mxCell id="rvBul70Y9NGTP6B8wIIJ-33" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=12;fontStyle=1;fontColor=#1B3A5C;" value="Legend" vertex="1">
+          <mxGeometry height="20" width="100" x="3088" y="1136" as="geometry" />
+        </mxCell>
+        <mxCell id="rvBul70Y9NGTP6B8wIIJ-34" edge="1" parent="1" style="endArrow=block;endFill=1;strokeColor=#7B1FA2;strokeWidth=2;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="3088" y="1168" as="sourcePoint" />
+            <mxPoint x="3148" y="1168" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rvBul70Y9NGTP6B8wIIJ-35" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=11;" value="Sync API call" vertex="1">
+          <mxGeometry height="20" width="92" x="3156" y="1159" as="geometry" />
+        </mxCell>
+        <mxCell id="rvBul70Y9NGTP6B8wIIJ-36" edge="1" parent="1" style="endArrow=block;endFill=1;strokeColor=#C62828;strokeWidth=1.5;dashed=1;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="3088" y="1196" as="sourcePoint" />
+            <mxPoint x="3148" y="1196" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rvBul70Y9NGTP6B8wIIJ-37" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=11;" value="DB write" vertex="1">
+          <mxGeometry height="20" width="92" x="3156" y="1187" as="geometry" />
+        </mxCell>
+        <mxCell id="rvBul70Y9NGTP6B8wIIJ-38" edge="1" parent="1" style="endArrow=block;endFill=1;strokeColor=#1565C0;strokeWidth=1.5;dashed=1;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="3255" y="1168" as="sourcePoint" />
+            <mxPoint x="3315" y="1168" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rvBul70Y9NGTP6B8wIIJ-39" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=11;" value="Async / event feed" vertex="1">
+          <mxGeometry height="20" width="102" x="3323" y="1159" as="geometry" />
+        </mxCell>
+        <mxCell id="rvBul70Y9NGTP6B8wIIJ-41" parent="1" style="text;html=1;strokeColor=#3F51B5;fillColor=#EEF2FF;align=left;verticalAlign=middle;fontSize=11;rounded=1;spacingLeft=6;" value="&lt;b&gt;Journey 1 flow&lt;/b&gt;&lt;br&gt;Dashboard → Campaign API → Geo / QR Services → Campaign DB" vertex="1">
+          <mxGeometry height="40" width="400" x="3448" y="1130" as="geometry" />
+        </mxCell>
+        <mxCell id="rvBul70Y9NGTP6B8wIIJ-42" parent="1" style="text;html=1;strokeColor=#00796B;fillColor=#E0F2F1;align=left;verticalAlign=middle;fontSize=11;rounded=1;spacingLeft=6;" value="&lt;b&gt;Journey 2 flow&lt;/b&gt;&lt;br&gt;Field App → Agent API → Geo / QR Services → Delivery Log DB → Audit Log" vertex="1">
+          <mxGeometry height="40" width="400" x="3448" y="1178" as="geometry" />
+        </mxCell>
+        <mxCell id="rvBul70Y9NGTP6B8wIIJ-25" edge="1" parent="1" source="rvBul70Y9NGTP6B8wIIJ-9" style="endArrow=block;endFill=1;strokeColor=#C62828;strokeWidth=1.5;dashed=1;fontSize=10;fontColor=#B71C1C;exitX=0.25;exitY=1;exitDx=0;exitDy=0;" value="INSERT / UPDATE">
+          <mxGeometry relative="1" x="0.5557" y="-1" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points" />
+            <mxPoint x="3068" y="758" as="sourcePoint" />
+            <mxPoint x="3068" y="1018" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rvBul70Y9NGTP6B8wIIJ-26" edge="1" parent="1" source="rvBul70Y9NGTP6B8wIIJ-10" style="endArrow=block;endFill=1;strokeColor=#00796B;strokeWidth=1.5;fontSize=10;fontColor=#004D40;exitX=0;exitY=0.75;exitDx=0;exitDy=0;" value="verifyLocation()">
+          <mxGeometry relative="1" x="-0.1821" y="-1" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points" />
+            <mxPoint x="3738.64" y="758" as="sourcePoint" />
+            <mxPoint x="3200" y="848" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rvBul70Y9NGTP6B8wIIJ-27" edge="1" parent="1" source="rvBul70Y9NGTP6B8wIIJ-10" style="endArrow=block;endFill=1;strokeColor=#F57F17;strokeWidth=1.5;fontSize=10;fontColor=#E65100;exitX=0.25;exitY=1;exitDx=0;exitDy=0;" value="validateQR()">
+          <mxGeometry relative="1" x="-0.2634" y="3" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points" />
+            <mxPoint x="3688.8199999999997" y="738" as="sourcePoint" />
+            <mxPoint x="3428" y="848" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rvBul70Y9NGTP6B8wIIJ-46" parent="1" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=20;fontStyle=1;swimlaneLine=0;" value="Journey 2 – Agent Flyer Scan" vertex="1">
+          <mxGeometry height="40" width="310" x="2219" y="392" as="geometry" />
+        </mxCell>
+        <mxCell id="rvBul70Y9NGTP6B8wIIJ-47" parent="1" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=13;" value="Integration Flow – System Integration Testing" vertex="1">
+          <mxGeometry height="25" width="290" x="2229" y="424" as="geometry" />
+        </mxCell>
+        <mxCell id="rvBul70Y9NGTP6B8wIIJ-48" parent="1" style="swimlane;startSize=40;fillColor=#E8EAF6;strokeColor=#3F51B5;fontStyle=1;fontSize=12;fontColor=#1B3A5C;opacity=30;swimlaneLine=0;strokeWidth=0.5;" value="Mobile App" vertex="1">
+          <mxGeometry height="540" width="140" x="1870" y="462" as="geometry" />
+        </mxCell>
+        <mxCell id="rvBul70Y9NGTP6B8wIIJ-62" parent="rvBul70Y9NGTP6B8wIIJ-48" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=11;fontColor=#1B3A5C;fontStyle=0;swimlaneLine=0;" value="route + flyer manifest" vertex="1">
+          <mxGeometry height="22" width="115" x="105" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="rvBul70Y9NGTP6B8wIIJ-54" edge="1" parent="rvBul70Y9NGTP6B8wIIJ-48" style="endArrow=none;dashed=1;strokeColor=#9E9E9E;strokeWidth=1;swimlaneLine=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="69.5" y="40" as="sourcePoint" />
+            <mxPoint x="70" y="540" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rvBul70Y9NGTP6B8wIIJ-86" parent="rvBul70Y9NGTP6B8wIIJ-48" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8EAF6;strokeColor=#3F51B5;fontSize=11;fontColor=#1B3A5C;swimlaneLine=0;" value="UI confirms scan" vertex="1">
+          <mxGeometry height="35" width="105" x="17.5" y="493" as="geometry" />
+        </mxCell>
+        <mxCell id="rvBul70Y9NGTP6B8wIIJ-77" edge="1" parent="rvBul70Y9NGTP6B8wIIJ-48" style="endArrow=block;endFill=1;strokeColor=#C62828;strokeWidth=1.5;swimlaneLine=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="230" y="342" as="sourcePoint" />
+            <mxPoint x="70" y="342" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rvBul70Y9NGTP6B8wIIJ-49" parent="1" style="swimlane;startSize=40;fillColor=#EDE7F6;strokeColor=#7B1FA2;fontStyle=1;fontSize=12;fontColor=#4A148C;opacity=30;swimlaneLine=0;strokeWidth=0.5;" value="Agent API" vertex="1">
+          <mxGeometry height="540" width="139" x="2031" y="462" as="geometry" />
+        </mxCell>
+        <mxCell id="rvBul70Y9NGTP6B8wIIJ-64" parent="rvBul70Y9NGTP6B8wIIJ-49" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=11;fontColor=#1B3A5C;swimlaneLine=0;" value="POST /scans  {qr, lat, lng, ts}" vertex="1">
+          <mxGeometry height="22" width="220" x="-102.5" y="135" as="geometry" />
+        </mxCell>
+        <mxCell id="rvBul70Y9NGTP6B8wIIJ-70" parent="rvBul70Y9NGTP6B8wIIJ-49" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=11;fontColor=#C62828;fontStyle=1;swimlaneLine=0;" value="403 – out-of-zone (STOP)" vertex="1">
+          <mxGeometry height="22" width="175" x="-95" y="230" as="geometry" />
+        </mxCell>
+        <mxCell id="rvBul70Y9NGTP6B8wIIJ-60" parent="rvBul70Y9NGTP6B8wIIJ-49" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=11;fontColor=#1B3A5C;swimlaneLine=0;" value="&amp;nbsp;GET /routes/:id" vertex="1">
+          <mxGeometry height="22" width="95" x="-55" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="rvBul70Y9NGTP6B8wIIJ-83" edge="1" parent="rvBul70Y9NGTP6B8wIIJ-49" style="endArrow=block;endFill=1;strokeColor=#1565C0;strokeWidth=1.5;dashed=1;swimlaneLine=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="69" y="436" as="sourcePoint" />
+            <mxPoint x="779" y="436" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rvBul70Y9NGTP6B8wIIJ-82" parent="rvBul70Y9NGTP6B8wIIJ-49" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=11;fontColor=#0D47A1;swimlaneLine=0;" value="async → auditLog(scan_event)" vertex="1">
+          <mxGeometry height="22" width="170" x="370" y="413" as="geometry" />
+        </mxCell>
+        <mxCell id="rvBul70Y9NGTP6B8wIIJ-61" edge="1" parent="rvBul70Y9NGTP6B8wIIJ-49" style="endArrow=block;endFill=1;strokeColor=#3F51B5;strokeWidth=2;swimlaneLine=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-91" y="80" as="sourcePoint" />
+            <mxPoint x="69" y="80" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rvBul70Y9NGTP6B8wIIJ-71" edge="1" parent="rvBul70Y9NGTP6B8wIIJ-49" style="endArrow=block;endFill=1;strokeColor=#C62828;strokeWidth=1.5;swimlaneLine=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="69" y="254" as="sourcePoint" />
+            <mxPoint x="-91" y="254" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rvBul70Y9NGTP6B8wIIJ-55" edge="1" parent="rvBul70Y9NGTP6B8wIIJ-49" style="endArrow=none;dashed=1;strokeColor=#9E9E9E;strokeWidth=1;swimlaneLine=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="69.22" y="310" />
+            </Array>
+            <mxPoint x="69.22" y="40" as="sourcePoint" />
+            <mxPoint x="69.72" y="540" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rvBul70Y9NGTP6B8wIIJ-65" edge="1" parent="rvBul70Y9NGTP6B8wIIJ-49" style="endArrow=block;endFill=1;strokeColor=#3F51B5;strokeWidth=2;swimlaneLine=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-91" y="160" as="sourcePoint" />
+            <mxPoint x="69" y="160" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rvBul70Y9NGTP6B8wIIJ-63" edge="1" parent="rvBul70Y9NGTP6B8wIIJ-49" style="endArrow=block;endFill=1;strokeColor=#3F51B5;strokeWidth=1;dashed=1;swimlaneLine=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="69" y="120" as="sourcePoint" />
+            <mxPoint x="-91" y="120" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rvBul70Y9NGTP6B8wIIJ-76" parent="rvBul70Y9NGTP6B8wIIJ-49" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=11;fontColor=#C62828;fontStyle=1;swimlaneLine=0;" value="422 – invalid / duplicate QR (STOP)" vertex="1">
+          <mxGeometry height="22" width="190" x="-102.5" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="rvBul70Y9NGTP6B8wIIJ-84" parent="rvBul70Y9NGTP6B8wIIJ-49" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=11;fontColor=#4A148C;fontStyle=0;swimlaneLine=0;" value="200 OK – delivery_id confirmed" vertex="1">
+          <mxGeometry height="22" width="170" x="-95" y="450" as="geometry" />
+        </mxCell>
+        <mxCell id="rvBul70Y9NGTP6B8wIIJ-85" edge="1" parent="rvBul70Y9NGTP6B8wIIJ-49" style="endArrow=block;endFill=1;strokeColor=#7B1FA2;strokeWidth=1;dashed=1;swimlaneLine=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="69" y="475" as="sourcePoint" />
+            <mxPoint x="-91" y="475" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rvBul70Y9NGTP6B8wIIJ-50" parent="1" style="swimlane;startSize=40;fillColor=#E0F2F1;strokeColor=#00796B;fontStyle=1;fontSize=12;fontColor=#004D40;opacity=30;swimlaneLine=0;strokeWidth=0.5;" value="Geofence Service" vertex="1">
+          <mxGeometry height="540" width="160" x="2190" y="462" as="geometry" />
+        </mxCell>
+        <mxCell id="rvBul70Y9NGTP6B8wIIJ-78" parent="rvBul70Y9NGTP6B8wIIJ-50" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=11;fontColor=#B71C1C;swimlaneLine=0;" value="INSERT delivery_entry" vertex="1">
+          <mxGeometry height="22" width="125" x="115" y="343" as="geometry" />
+        </mxCell>
+        <mxCell id="rvBul70Y9NGTP6B8wIIJ-74" parent="rvBul70Y9NGTP6B8wIIJ-50" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=11;fontColor=#E65100;fontStyle=2;swimlaneLine=0;" value="valid / invalid / duplicate" vertex="1">
+          <mxGeometry height="22" width="150" x="10" y="290" as="geometry" />
+        </mxCell>
+        <mxCell id="rvBul70Y9NGTP6B8wIIJ-66" parent="rvBul70Y9NGTP6B8wIIJ-50" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=11;fontColor=#004D40;swimlaneLine=0;" value="verifyLocation(lat, lng)" vertex="1">
+          <mxGeometry height="22" width="115" x="-65" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="rvBul70Y9NGTP6B8wIIJ-67" edge="1" parent="rvBul70Y9NGTP6B8wIIJ-50" style="endArrow=block;endFill=1;strokeColor=#00796B;strokeWidth=2;entryX=0.986;entryY=0.87;entryDx=0;entryDy=0;entryPerimeter=0;swimlaneLine=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-90" y="193" as="sourcePoint" />
+            <mxPoint x="82.96999999999986" y="192.7" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rvBul70Y9NGTP6B8wIIJ-68" parent="rvBul70Y9NGTP6B8wIIJ-50" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=11;fontColor=#004D40;fontStyle=0;swimlaneLine=0;" value="inside / outside zone" vertex="1">
+          <mxGeometry height="22" width="125" x="-70" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="rvBul70Y9NGTP6B8wIIJ-69" edge="1" parent="rvBul70Y9NGTP6B8wIIJ-50" style="endArrow=block;endFill=1;strokeColor=#00796B;strokeWidth=1;dashed=1;swimlaneLine=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="77.5" y="222" as="sourcePoint" />
+            <mxPoint x="-92.5" y="222" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rvBul70Y9NGTP6B8wIIJ-73" edge="1" parent="rvBul70Y9NGTP6B8wIIJ-50" style="endArrow=block;endFill=1;strokeColor=#F57F17;strokeWidth=2;swimlaneLine=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-90" y="284" as="sourcePoint" />
+            <mxPoint x="260" y="284" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rvBul70Y9NGTP6B8wIIJ-72" parent="rvBul70Y9NGTP6B8wIIJ-50" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=11;fontColor=#E65100;swimlaneLine=0;" value="validateQR(code, campaign_id)" vertex="1">
+          <mxGeometry height="22" width="150" x="10" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="rvBul70Y9NGTP6B8wIIJ-79" edge="1" parent="rvBul70Y9NGTP6B8wIIJ-50" style="endArrow=block;endFill=1;strokeColor=#C62828;strokeWidth=2;swimlaneLine=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-90" y="365" as="sourcePoint" />
+            <mxPoint x="440" y="365" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rvBul70Y9NGTP6B8wIIJ-75" edge="1" parent="rvBul70Y9NGTP6B8wIIJ-50" style="endArrow=block;endFill=1;strokeColor=#F57F17;strokeWidth=1;dashed=1;swimlaneLine=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="260" y="312" as="sourcePoint" />
+            <mxPoint x="-90" y="312" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rvBul70Y9NGTP6B8wIIJ-56" edge="1" parent="rvBul70Y9NGTP6B8wIIJ-50" style="endArrow=none;dashed=1;strokeColor=#9E9E9E;strokeWidth=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;swimlaneLine=0;" target="rvBul70Y9NGTP6B8wIIJ-50" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="79.5" y="40" as="sourcePoint" />
+            <mxPoint x="79.5" y="580" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rvBul70Y9NGTP6B8wIIJ-51" parent="1" style="swimlane;startSize=40;fillColor=#FFF8E1;strokeColor=#F57F17;fontStyle=1;fontSize=12;fontColor=#E65100;opacity=30;swimlaneLine=0;strokeWidth=0.5;" value="QR Validation" vertex="1">
+          <mxGeometry height="540" width="155" x="2370" y="462" as="geometry" />
+        </mxCell>
+        <mxCell id="rvBul70Y9NGTP6B8wIIJ-80" parent="rvBul70Y9NGTP6B8wIIJ-51" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=11;fontColor=#B71C1C;fontStyle=0;swimlaneLine=0;" value="delivery_id" vertex="1">
+          <mxGeometry height="22" width="115" x="-65" y="377" as="geometry" />
+        </mxCell>
+        <mxCell id="rvBul70Y9NGTP6B8wIIJ-81" edge="1" parent="rvBul70Y9NGTP6B8wIIJ-51" style="endArrow=block;endFill=1;strokeColor=#C62828;strokeWidth=1;dashed=1;swimlaneLine=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="265" y="400" as="sourcePoint" />
+            <mxPoint x="-270" y="400" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rvBul70Y9NGTP6B8wIIJ-52" parent="1" style="swimlane;startSize=40;fillColor=#FCE4EC;strokeColor=#C62828;fontStyle=1;fontSize=12;fontColor=#B71C1C;opacity=30;swimlaneLine=0;strokeWidth=0.5;" value="Delivery Log" vertex="1">
+          <mxGeometry height="540" width="165" x="2550" y="462" as="geometry" />
+        </mxCell>
+        <mxCell id="rvBul70Y9NGTP6B8wIIJ-53" parent="1" style="swimlane;startSize=40;fillColor=#E3F2FD;strokeColor=#1565C0;fontStyle=1;fontSize=12;fontColor=#0D47A1;opacity=30;swimlaneLine=0;strokeWidth=0.5;" value="Audit Log / Reporting" vertex="1">
+          <mxGeometry height="540" width="160" x="2730" y="462" as="geometry" />
+        </mxCell>
+        <mxCell id="rvBul70Y9NGTP6B8wIIJ-59" edge="1" parent="rvBul70Y9NGTP6B8wIIJ-53" style="endArrow=none;dashed=1;strokeColor=#9E9E9E;strokeWidth=1;swimlaneLine=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="79.28999999999996" y="40" as="sourcePoint" />
+            <mxPoint x="79" y="540" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rvBul70Y9NGTP6B8wIIJ-57" edge="1" parent="1" style="endArrow=none;dashed=1;strokeColor=#9E9E9E;strokeWidth=1;swimlaneLine=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="2447" y="502" as="sourcePoint" />
+            <mxPoint x="2447" y="1002" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rvBul70Y9NGTP6B8wIIJ-58" edge="1" parent="1" style="endArrow=none;dashed=1;strokeColor=#9E9E9E;strokeWidth=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;swimlaneLine=0;" target="rvBul70Y9NGTP6B8wIIJ-52" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="2632" y="502" as="sourcePoint" />
+            <mxPoint x="2630" y="1002" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rvBul70Y9NGTP6B8wIIJ-87" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#BDBDBD;swimlaneLine=0;" value="" vertex="1">
+          <mxGeometry height="81" width="400" x="1940" y="1022" as="geometry" />
+        </mxCell>
+        <mxCell id="rvBul70Y9NGTP6B8wIIJ-88" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=11;fontStyle=1;fontColor=#1B3A5C;swimlaneLine=0;" value="Legend" vertex="1">
+          <mxGeometry height="20" width="100" x="1955" y="1030" as="geometry" />
+        </mxCell>
+        <mxCell id="rvBul70Y9NGTP6B8wIIJ-89" edge="1" parent="1" style="endArrow=block;endFill=1;strokeWidth=2;swimlaneLine=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1955" y="1059" as="sourcePoint" />
+            <mxPoint x="2010" y="1059" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rvBul70Y9NGTP6B8wIIJ-90" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=11;swimlaneLine=0;" value="Synchronous call" vertex="1">
+          <mxGeometry height="20" width="92" x="2018" y="1050" as="geometry" />
+        </mxCell>
+        <mxCell id="rvBul70Y9NGTP6B8wIIJ-91" edge="1" parent="1" style="endArrow=block;endFill=1;strokeColor=#1565C0;strokeWidth=1.5;dashed=1;swimlaneLine=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1955" y="1084" as="sourcePoint" />
+            <mxPoint x="2010" y="1084" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rvBul70Y9NGTP6B8wIIJ-92" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=11;swimlaneLine=0;" value="Async / fire-and-forget" vertex="1">
+          <mxGeometry height="20" width="112" x="2018" y="1075" as="geometry" />
+        </mxCell>
+        <mxCell id="rvBul70Y9NGTP6B8wIIJ-93" edge="1" parent="1" style="endArrow=block;endFill=1;strokeColor=#C62828;strokeWidth=1.5;swimlaneLine=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="2160" y="1059" as="sourcePoint" />
+            <mxPoint x="2215" y="1059" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rvBul70Y9NGTP6B8wIIJ-94" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=11;fontColor=#C62828;swimlaneLine=0;" value="Error / stop" vertex="1">
+          <mxGeometry height="20" width="100" x="2223" y="1050" as="geometry" />
+        </mxCell>
+        <mxCell id="rvBul70Y9NGTP6B8wIIJ-95" parent="1" style="text;html=1;strokeColor=#1B3A5C;fillColor=#EEF2FF;align=left;verticalAlign=middle;fontSize=11;rounded=1;spacingLeft=8;swimlaneLine=0;" value="&lt;b&gt;Integration Test Checkpoints&lt;/b&gt;&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;• Geofence 403 when GPS coords fall outside campaign boundary&lt;br&gt;• QR duplicate returns distinct error code from invalid QR&lt;br&gt;• Delivery entry NOT created if geofence or QR check fails&lt;br&gt;• Audit log written even on failed scans (observability)&lt;br&gt;• delivery_id in 200 response matches DB record&lt;br&gt;• Async audit does NOT block 200 response latency&lt;/div&gt;" vertex="1">
+          <mxGeometry height="130" width="355" x="2365" y="1023" as="geometry" />
+        </mxCell>
+        <mxCell id="rvBul70Y9NGTP6B8wIIJ-29" edge="1" parent="1" style="endArrow=block;endFill=1;strokeColor=#C62828;strokeWidth=1.5;dashed=1;fontSize=10;fontColor=#B71C1C;exitX=0.826;exitY=1.037;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0;entryDx=0;entryDy=15;entryPerimeter=0;" target="rvBul70Y9NGTP6B8wIIJ-18" value="INSERT delivery_entry">
+          <mxGeometry relative="1" x="0.5793" y="-2" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points" />
+            <mxPoint x="3757.7200000000003" y="747.9999999999999" as="sourcePoint" />
+            <mxPoint x="3386" y="1025.4099999999999" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rvBul70Y9NGTP6B8wIIJ-23" edge="1" parent="1" source="rvBul70Y9NGTP6B8wIIJ-9" style="endArrow=block;endFill=1;strokeColor=#F57F17;strokeWidth=1.5;fontSize=10;fontColor=#E65100;entryX=0.25;entryY=0;entryDx=0;entryDy=0;exitX=0.907;exitY=1.021;exitDx=0;exitDy=0;exitPerimeter=0;" target="rvBul70Y9NGTP6B8wIIJ-13" value="checkQRPool()">
+          <mxGeometry relative="1" x="-0.2279" y="-1" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points" />
+            <mxPoint x="3238" y="748" as="sourcePoint" />
+            <mxPoint x="3296.7799999999997" y="855.4100000000001" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rvBul70Y9NGTP6B8wIIJ-31" edge="1" parent="1" source="rvBul70Y9NGTP6B8wIIJ-15" style="endArrow=block;endFill=1;strokeColor=#1565C0;strokeWidth=1.5;dashed=1;fontSize=10;fontColor=#0D47A1;" target="rvBul70Y9NGTP6B8wIIJ-19" value="async feed">
+          <mxGeometry relative="1" x="-0.2" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rvBul70Y9NGTP6B8wIIJ-28" edge="1" parent="1" source="rvBul70Y9NGTP6B8wIIJ-10" style="endArrow=block;endFill=1;strokeColor=#1565C0;strokeWidth=1.5;dashed=1;fontSize=10;fontColor=#0D47A1;" target="rvBul70Y9NGTP6B8wIIJ-15" value="async audit">
+          <mxGeometry relative="1" x="-0.2" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rvBul70Y9NGTP6B8wIIJ-21" edge="1" parent="1" source="rvBul70Y9NGTP6B8wIIJ-7" style="endArrow=block;endFill=1;strokeColor=#7B1FA2;strokeWidth=2;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="rvBul70Y9NGTP6B8wIIJ-10" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rvBul70Y9NGTP6B8wIIJ-106" parent="1" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=20;fontStyle=1;" value="Journey 1 – Campaign Creation" vertex="1">
+          <mxGeometry height="40" width="312" x="1094" y="392" as="geometry" />
+        </mxCell>
+        <mxCell id="rvBul70Y9NGTP6B8wIIJ-107" parent="1" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=13;" value="Integration Flow – System Integration Testing" vertex="1">
+          <mxGeometry height="25" width="296" x="1102" y="424" as="geometry" />
+        </mxCell>
+        <mxCell id="rvBul70Y9NGTP6B8wIIJ-108" parent="1" style="swimlane;startSize=40;fillColor=#E8EAF6;strokeColor=#3F51B5;fontStyle=1;fontSize=13;fontColor=#1B3A5C;opacity=30;strokeWidth=0.5;" value="Admin UI" vertex="1">
+          <mxGeometry height="580" width="161" x="778" y="464" as="geometry" />
+        </mxCell>
+        <mxCell id="rvBul70Y9NGTP6B8wIIJ-135" parent="rvBul70Y9NGTP6B8wIIJ-108" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFCDD2;strokeColor=#C62828;fontSize=11;fontColor=#B71C1C;" value="Display error to Admin" vertex="1">
+          <mxGeometry height="30.26" width="134" x="13.5" y="432" as="geometry" />
+        </mxCell>
+        <mxCell id="rvBul70Y9NGTP6B8wIIJ-134" edge="1" parent="rvBul70Y9NGTP6B8wIIJ-108" style="endArrow=block;endFill=1;strokeColor=#C62828;strokeWidth=2;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="270" y="413.5" as="sourcePoint" />
+            <mxPoint x="81" y="413.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rvBul70Y9NGTP6B8wIIJ-143" edge="1" parent="rvBul70Y9NGTP6B8wIIJ-108" style="endArrow=block;endFill=1;strokeColor=#7B1FA2;strokeWidth=1;dashed=1;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="273" y="565" as="sourcePoint" />
+            <mxPoint x="80" y="565" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rvBul70Y9NGTP6B8wIIJ-109" parent="1" style="swimlane;startSize=40;fillColor=#EDE7F6;strokeColor=#7B1FA2;fontStyle=1;fontSize=13;fontColor=#4A148C;opacity=30;strokeWidth=0.5;" value="Campaign API" vertex="1">
+          <mxGeometry height="580" width="180" x="960" y="464" as="geometry" />
+        </mxCell>
+        <mxCell id="rvBul70Y9NGTP6B8wIIJ-119" edge="1" parent="rvBul70Y9NGTP6B8wIIJ-109" style="endArrow=block;endFill=1;strokeColor=#3F51B5;strokeWidth=2;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-100" y="89.38999999999999" as="sourcePoint" />
+            <mxPoint x="88" y="89.38999999999999" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rvBul70Y9NGTP6B8wIIJ-132" parent="rvBul70Y9NGTP6B8wIIJ-109" style="rhombus;whiteSpace=wrap;html=1;fillColor=#EDE7F6;strokeColor=#7B1FA2;fontSize=12;fontStyle=1;fontColor=#4A148C;" value="All validations pass?" vertex="1">
+          <mxGeometry height="60" width="160" x="14" y="331" as="geometry" />
+        </mxCell>
+        <mxCell id="rvBul70Y9NGTP6B8wIIJ-142" parent="rvBul70Y9NGTP6B8wIIJ-109" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=11;fontColor=#4A148C;fontStyle=2;" value="201 campaign_id, status: Draft" vertex="1">
+          <mxGeometry height="25" width="146" x="-72" y="540" as="geometry" />
+        </mxCell>
+        <mxCell id="rvBul70Y9NGTP6B8wIIJ-133" parent="rvBul70Y9NGTP6B8wIIJ-109" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=11;fontColor=#C62828;fontStyle=2;" value="400 error – validation failed" vertex="1">
+          <mxGeometry height="25" width="144" x="-76" y="387" as="geometry" />
+        </mxCell>
+        <mxCell id="rvBul70Y9NGTP6B8wIIJ-110" parent="1" style="swimlane;startSize=40;fillColor=#E0F2F1;strokeColor=#00796B;fontStyle=1;fontSize=13;fontColor=#004D40;opacity=30;strokeWidth=0.5;" value="Geo Service" vertex="1">
+          <mxGeometry height="580" width="180" x="1160" y="464" as="geometry" />
+        </mxCell>
+        <mxCell id="rvBul70Y9NGTP6B8wIIJ-120" parent="rvBul70Y9NGTP6B8wIIJ-110" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=11;fontColor=#004D40;" value="validateArea()" vertex="1">
+          <mxGeometry height="17.61" width="82" x="-51" y="106.39" as="geometry" />
+        </mxCell>
+        <mxCell id="rvBul70Y9NGTP6B8wIIJ-121" edge="1" parent="rvBul70Y9NGTP6B8wIIJ-110" style="endArrow=block;endFill=1;strokeColor=#00796B;strokeWidth=2;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-110" y="131" as="sourcePoint" />
+            <mxPoint x="91" y="132" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rvBul70Y9NGTP6B8wIIJ-122" parent="rvBul70Y9NGTP6B8wIIJ-110" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=11;fontColor=#004D40;fontStyle=2;" value="areas OK / error" vertex="1">
+          <mxGeometry height="14" width="98" x="-59" y="147" as="geometry" />
+        </mxCell>
+        <mxCell id="rvBul70Y9NGTP6B8wIIJ-123" edge="1" parent="rvBul70Y9NGTP6B8wIIJ-110" style="endArrow=block;endFill=1;strokeColor=#00796B;strokeWidth=1;dashed=1;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="90" y="165" as="sourcePoint" />
+            <mxPoint x="-110" y="165" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rvBul70Y9NGTP6B8wIIJ-124" parent="rvBul70Y9NGTP6B8wIIJ-110" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=11;fontColor=#E65100;" value="checkQRPool(qty)" vertex="1">
+          <mxGeometry height="16" width="108" x="35" y="188" as="geometry" />
+        </mxCell>
+        <mxCell id="rvBul70Y9NGTP6B8wIIJ-125" edge="1" parent="rvBul70Y9NGTP6B8wIIJ-110" style="endArrow=block;endFill=1;strokeColor=#F57F17;strokeWidth=2;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-110" y="207" as="sourcePoint" />
+            <mxPoint x="286" y="208" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rvBul70Y9NGTP6B8wIIJ-126" parent="rvBul70Y9NGTP6B8wIIJ-110" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=11;fontColor=#E65100;fontStyle=2;" value="pool available / exhausted" vertex="1">
+          <mxGeometry height="10" width="156" x="12" y="227" as="geometry" />
+        </mxCell>
+        <mxCell id="rvBul70Y9NGTP6B8wIIJ-127" edge="1" parent="rvBul70Y9NGTP6B8wIIJ-110" style="endArrow=block;endFill=1;strokeColor=#F57F17;strokeWidth=1;dashed=1;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="288" y="245" as="sourcePoint" />
+            <mxPoint x="-110" y="244" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rvBul70Y9NGTP6B8wIIJ-128" parent="rvBul70Y9NGTP6B8wIIJ-110" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=11;fontColor=#E65100;" value="&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(230, 81, 0), rgb(251, 123, 53));&quot;&gt;checkFlyerStock()&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="19" width="128" x="26" y="253" as="geometry" />
+        </mxCell>
+        <mxCell id="rvBul70Y9NGTP6B8wIIJ-129" edge="1" parent="rvBul70Y9NGTP6B8wIIJ-110" style="endArrow=block;endFill=1;strokeColor=#F57F17;strokeWidth=2;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-109" y="275" as="sourcePoint" />
+            <mxPoint x="290" y="275" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rvBul70Y9NGTP6B8wIIJ-131" edge="1" parent="rvBul70Y9NGTP6B8wIIJ-110" style="endArrow=block;endFill=1;strokeColor=#F57F17;strokeWidth=1;dashed=1;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="289.25" y="310" as="sourcePoint" />
+            <mxPoint x="-109.25" y="310" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rvBul70Y9NGTP6B8wIIJ-130" parent="rvBul70Y9NGTP6B8wIIJ-110" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=11;fontColor=#E65100;fontStyle=2;" value="stock levels / insufficient" vertex="1">
+          <mxGeometry height="18" width="130" x="24.25" y="290" as="geometry" />
+        </mxCell>
+        <mxCell id="rvBul70Y9NGTP6B8wIIJ-111" parent="1" style="swimlane;startSize=40;fillColor=#FFF8E1;strokeColor=#F57F17;fontStyle=1;fontSize=13;fontColor=#E65100;opacity=30;strokeWidth=0.5;" value="QR Service" vertex="1">
+          <mxGeometry height="580" width="180" x="1360" y="464" as="geometry" />
+        </mxCell>
+        <mxCell id="rvBul70Y9NGTP6B8wIIJ-138" parent="rvBul70Y9NGTP6B8wIIJ-111" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=11;fontColor=#B71C1C;fontStyle=2;" value="campaign_id returned" vertex="1">
+          <mxGeometry height="19" width="170" x="-95" y="460" as="geometry" />
+        </mxCell>
+        <mxCell id="rvBul70Y9NGTP6B8wIIJ-141" edge="1" parent="rvBul70Y9NGTP6B8wIIJ-111" style="endArrow=block;endFill=1;strokeColor=#C62828;strokeWidth=2;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-309" y="510" as="sourcePoint" />
+            <mxPoint x="288" y="511" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rvBul70Y9NGTP6B8wIIJ-112" parent="1" style="swimlane;startSize=40;fillColor=#FCE4EC;strokeColor=#C62828;fontStyle=1;fontSize=13;fontColor=#B71C1C;opacity=30;strokeWidth=0.5;" value="Campaign DB" vertex="1">
+          <mxGeometry height="580" width="180" x="1560" y="464" as="geometry" />
+        </mxCell>
+        <mxCell id="rvBul70Y9NGTP6B8wIIJ-113" edge="1" parent="1" style="endArrow=none;dashed=1;strokeColor=#9E9E9E;strokeWidth=1;" value="">
+          <mxGeometry relative="1" x="140" y="130" as="geometry">
+            <Array as="points" />
+            <mxPoint x="860" y="504" as="sourcePoint" />
+            <mxPoint x="860" y="1045" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rvBul70Y9NGTP6B8wIIJ-114" edge="1" parent="1" style="endArrow=none;dashed=1;strokeColor=#9E9E9E;strokeWidth=1;" value="">
+          <mxGeometry relative="1" x="330" y="130" as="geometry">
+            <Array as="points" />
+            <mxPoint x="1050" y="504" as="sourcePoint" />
+            <mxPoint x="1050" y="1040" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rvBul70Y9NGTP6B8wIIJ-115" edge="1" parent="1" style="endArrow=none;dashed=1;strokeColor=#9E9E9E;strokeWidth=1;" value="">
+          <mxGeometry relative="1" x="530" y="130" as="geometry">
+            <Array as="points" />
+            <mxPoint x="1250" y="504" as="sourcePoint" />
+            <mxPoint x="1250" y="1049" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rvBul70Y9NGTP6B8wIIJ-116" edge="1" parent="1" style="endArrow=none;dashed=1;strokeColor=#9E9E9E;strokeWidth=1;" value="">
+          <mxGeometry relative="1" x="730" y="130" as="geometry">
+            <Array as="points" />
+            <mxPoint x="1450" y="504" as="sourcePoint" />
+            <mxPoint x="1450" y="1040" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rvBul70Y9NGTP6B8wIIJ-117" edge="1" parent="1" style="endArrow=none;dashed=1;strokeColor=#9E9E9E;strokeWidth=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="rvBul70Y9NGTP6B8wIIJ-112" value="">
+          <mxGeometry relative="1" x="930" y="130" as="geometry">
+            <Array as="points" />
+            <mxPoint x="1650" y="504" as="sourcePoint" />
+            <mxPoint x="1650" y="1324" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rvBul70Y9NGTP6B8wIIJ-118" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=11;fontColor=#1B3A5C;" value="POST /campaigns" vertex="1">
+          <mxGeometry height="20" width="100" x="905" y="529" as="geometry" />
+        </mxCell>
+        <mxCell id="rvBul70Y9NGTP6B8wIIJ-136" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=11;fontColor=#B71C1C;" value="INSERT campaign metadata" vertex="1">
+          <mxGeometry height="19" width="174" x="1263" y="890" as="geometry" />
+        </mxCell>
+        <mxCell id="rvBul70Y9NGTP6B8wIIJ-137" edge="1" parent="1" style="endArrow=block;endFill=1;strokeColor=#C62828;strokeWidth=2;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1050" y="912" as="sourcePoint" />
+            <mxPoint x="1650" y="912" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rvBul70Y9NGTP6B8wIIJ-139" edge="1" parent="1" style="endArrow=block;endFill=1;strokeColor=#C62828;strokeWidth=1;dashed=1;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1648" y="945" as="sourcePoint" />
+            <mxPoint x="1050" y="945" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rvBul70Y9NGTP6B8wIIJ-144" parent="1" style="text;html=1;strokeColor=#1B3A5C;fillColor=#EEF2FF;align=left;verticalAlign=middle;fontSize=11;rounded=1;spacingLeft=8;" value="&lt;b&gt;Integration Test Checkpoints&lt;/b&gt;&lt;br&gt;• Geo validates boundary edge cases&lt;br&gt;• QR pool returns 409 on exhaustion&lt;br&gt;• DB rollback on partial validation failure&lt;br&gt;• Status = Draft only after ALL validations pass&lt;br&gt;• campaign_id in response matches DB record" vertex="1">
+          <mxGeometry height="100" width="255" x="1331" y="1059" as="geometry" />
+        </mxCell>
+        <mxCell id="rvBul70Y9NGTP6B8wIIJ-140" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=11;fontColor=#B71C1C;" value="UPDATE status → Draft" vertex="1">
+          <mxGeometry height="25" width="140" x="1280" y="951" as="geometry" />
+        </mxCell>
+        <mxCell id="rvBul70Y9NGTP6B8wIIJ-157" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#BDBDBD;swimlaneLine=0;" value="" vertex="1">
+          <mxGeometry height="81" width="400" x="914" y="1059" as="geometry" />
+        </mxCell>
+        <mxCell id="rvBul70Y9NGTP6B8wIIJ-158" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=11;fontStyle=1;fontColor=#1B3A5C;swimlaneLine=0;" value="Legend" vertex="1">
+          <mxGeometry height="20" width="100" x="929" y="1067" as="geometry" />
+        </mxCell>
+        <mxCell id="rvBul70Y9NGTP6B8wIIJ-159" edge="1" parent="1" style="endArrow=block;endFill=1;strokeWidth=2;swimlaneLine=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="929" y="1096" as="sourcePoint" />
+            <mxPoint x="984" y="1096" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rvBul70Y9NGTP6B8wIIJ-160" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=11;swimlaneLine=0;" value="Synchronous call" vertex="1">
+          <mxGeometry height="20" width="92" x="992" y="1087" as="geometry" />
+        </mxCell>
+        <mxCell id="rvBul70Y9NGTP6B8wIIJ-161" edge="1" parent="1" style="endArrow=block;endFill=1;strokeColor=#1565C0;strokeWidth=1.5;dashed=1;swimlaneLine=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="929" y="1121" as="sourcePoint" />
+            <mxPoint x="984" y="1121" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rvBul70Y9NGTP6B8wIIJ-162" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=11;swimlaneLine=0;" value="Async / fire-and-forget" vertex="1">
+          <mxGeometry height="20" width="112" x="992" y="1112" as="geometry" />
+        </mxCell>
+        <mxCell id="rvBul70Y9NGTP6B8wIIJ-163" edge="1" parent="1" style="endArrow=block;endFill=1;strokeColor=#C62828;strokeWidth=1.5;swimlaneLine=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1134" y="1096" as="sourcePoint" />
+            <mxPoint x="1189" y="1096" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rvBul70Y9NGTP6B8wIIJ-164" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=11;fontColor=#C62828;swimlaneLine=0;" value="Error / stop" vertex="1">
+          <mxGeometry height="20" width="100" x="1197" y="1087" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
