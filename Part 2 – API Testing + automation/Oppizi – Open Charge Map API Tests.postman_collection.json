@@ -1,0 +1,1612 @@
+{
+  "info": {
+    "_postman_id": "a2d7d251-b93d-4d88-8cb5-d62f098b7c3c",
+    "name": "Oppizi – Open Charge Map API Tests",
+    "description": "API test suite for the Open Charge Map v3 API.\nCovers GET /poi/ and GET /referencedata/ with response time, status code, schema, and business logic validations.\n\nSetup: Import this collection and the accompanying environment file, then set the `apiKey` variable to your OCM key.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "39487584",
+    "_collection_link": "https://go.postman.co/collection/39487584-a2d7d251-b93d-4d88-8cb5-d62f098b7c3c?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "POI – GET /poi/",
+      "item": [
+        {
+          "name": "POI-01 – Status code is 200",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test('POI-01 | Status code is 200', function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/poi/?output=json&latitude={{lat}}&longitude={{lng}}&distance={{distance}}&distanceunit=KM&maxresults={{maxresults}}&key={{apiKey}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "poi",
+                ""
+              ],
+              "query": [
+                {
+                  "key": "output",
+                  "value": "json"
+                },
+                {
+                  "key": "latitude",
+                  "value": "{{lat}}"
+                },
+                {
+                  "key": "longitude",
+                  "value": "{{lng}}"
+                },
+                {
+                  "key": "distance",
+                  "value": "{{distance}}"
+                },
+                {
+                  "key": "distanceunit",
+                  "value": "KM"
+                },
+                {
+                  "key": "maxresults",
+                  "value": "{{maxresults}}"
+                },
+                {
+                  "key": "key",
+                  "value": "{{apiKey}}"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "POI-02 – Response time under 1000 ms",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test('POI-02 | Response time is under 1000ms', function () {",
+                  "    pm.expect(pm.response.responseTime).to.be.below(1000);",
+                  "});"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/poi/?output=json&latitude={{lat}}&longitude={{lng}}&distance={{distance}}&distanceunit=KM&maxresults={{maxresults}}&key={{apiKey}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "poi",
+                ""
+              ],
+              "query": [
+                {
+                  "key": "output",
+                  "value": "json"
+                },
+                {
+                  "key": "latitude",
+                  "value": "{{lat}}"
+                },
+                {
+                  "key": "longitude",
+                  "value": "{{lng}}"
+                },
+                {
+                  "key": "distance",
+                  "value": "{{distance}}"
+                },
+                {
+                  "key": "distanceunit",
+                  "value": "KM"
+                },
+                {
+                  "key": "maxresults",
+                  "value": "{{maxresults}}"
+                },
+                {
+                  "key": "key",
+                  "value": "{{apiKey}}"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "POI-03 – Response is a JSON array",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test('POI-01 | Status code is 200', function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});",
+                  "",
+                  "pm.test('POI-03 | Response body is a JSON array', function () {",
+                  "    const body = pm.response.json();",
+                  "    pm.expect(body).to.be.an('array');",
+                  "});"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/poi/?output=json&latitude={{lat}}&longitude={{lng}}&distance={{distance}}&distanceunit=KM&maxresults={{maxresults}}&key={{apiKey}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "poi",
+                ""
+              ],
+              "query": [
+                {
+                  "key": "output",
+                  "value": "json"
+                },
+                {
+                  "key": "latitude",
+                  "value": "{{lat}}"
+                },
+                {
+                  "key": "longitude",
+                  "value": "{{lng}}"
+                },
+                {
+                  "key": "distance",
+                  "value": "{{distance}}"
+                },
+                {
+                  "key": "distanceunit",
+                  "value": "KM"
+                },
+                {
+                  "key": "maxresults",
+                  "value": "{{maxresults}}"
+                },
+                {
+                  "key": "key",
+                  "value": "{{apiKey}}"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "POI-04 – Schema: required top-level fields present",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test('POI-01 | Status code is 200', function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});",
+                  "",
+                  "// Validates each POI object contains the required top-level fields",
+                  "// defined in the OCM OpenAPI spec (POI schema).",
+                  "pm.test('POI-04 | Each POI has required top-level fields', function () {",
+                  "    const pois = pm.response.json();",
+                  "    pm.expect(pois).to.be.an('array').that.is.not.empty;",
+                  "",
+                  "    const requiredFields = ['ID', 'UUID', 'AddressInfo', 'Connections'];",
+                  "",
+                  "    pois.forEach(function (poi, i) {",
+                  "        requiredFields.forEach(function (field) {",
+                  "            pm.expect(poi, `POI[${i}] missing '${field}'`).to.have.property(field);",
+                  "        });",
+                  "    });",
+                  "});"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/poi/?output=json&latitude={{lat}}&longitude={{lng}}&distance={{distance}}&distanceunit=KM&maxresults={{maxresults}}&key={{apiKey}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "poi",
+                ""
+              ],
+              "query": [
+                {
+                  "key": "output",
+                  "value": "json"
+                },
+                {
+                  "key": "latitude",
+                  "value": "{{lat}}"
+                },
+                {
+                  "key": "longitude",
+                  "value": "{{lng}}"
+                },
+                {
+                  "key": "distance",
+                  "value": "{{distance}}"
+                },
+                {
+                  "key": "distanceunit",
+                  "value": "KM"
+                },
+                {
+                  "key": "maxresults",
+                  "value": "{{maxresults}}"
+                },
+                {
+                  "key": "key",
+                  "value": "{{apiKey}}"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "POI-05 – Schema: AddressInfo structure",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test('POI-01 | Status code is 200', function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});",
+                  "",
+                  "// Validates AddressInfo nested object structure per the OCM spec.",
+                  "pm.test('POI-05 | AddressInfo has correct structure', function () {",
+                  "    const pois = pm.response.json();",
+                  "    pm.expect(pois).to.be.an('array').that.is.not.empty;",
+                  "",
+                  "    pois.forEach(function (poi, i) {",
+                  "        const addr = poi.AddressInfo;",
+                  "        pm.expect(addr, `POI[${i}].AddressInfo is missing`).to.be.an('object');",
+                  "",
+                  "        // Required AddressInfo fields from OCM spec",
+                  "        pm.expect(addr, `POI[${i}].AddressInfo.ID`).to.have.property('ID');",
+                  "        pm.expect(addr, `POI[${i}].AddressInfo.Latitude`).to.have.property('Latitude');",
+                  "        pm.expect(addr, `POI[${i}].AddressInfo.Longitude`).to.have.property('Longitude');",
+                  "        pm.expect(addr, `POI[${i}].AddressInfo.CountryID`).to.have.property('CountryID');",
+                  "",
+                  "        // Type checks",
+                  "        pm.expect(addr.ID).to.be.a('number');",
+                  "        pm.expect(addr.Latitude).to.be.a('number');",
+                  "        pm.expect(addr.Longitude).to.be.a('number');",
+                  "    });",
+                  "});"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/poi/?output=json&latitude={{lat}}&longitude={{lng}}&distance={{distance}}&distanceunit=KM&maxresults={{maxresults}}&key={{apiKey}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "poi",
+                ""
+              ],
+              "query": [
+                {
+                  "key": "output",
+                  "value": "json"
+                },
+                {
+                  "key": "latitude",
+                  "value": "{{lat}}"
+                },
+                {
+                  "key": "longitude",
+                  "value": "{{lng}}"
+                },
+                {
+                  "key": "distance",
+                  "value": "{{distance}}"
+                },
+                {
+                  "key": "distanceunit",
+                  "value": "KM"
+                },
+                {
+                  "key": "maxresults",
+                  "value": "{{maxresults}}"
+                },
+                {
+                  "key": "key",
+                  "value": "{{apiKey}}"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "POI-06 – Schema: Connections array structure",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test('POI-01 | Status code is 200', function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});",
+                  "",
+                  "pm.test('POI-06 | Connections is an array with valid items', function () {",
+                  "    const pois = pm.response.json();",
+                  "    pm.expect(pois).to.be.an('array').that.is.not.empty;",
+                  "",
+                  "    pois.forEach(function (poi, i) {",
+                  "        pm.expect(poi.Connections, `POI[${i}].Connections`).to.be.an('array');",
+                  "",
+                  "        poi.Connections.forEach(function (conn, j) {",
+                  "            pm.expect(conn, `POI[${i}].Connections[${j}] missing ID`).to.have.property('ID');",
+                  "            pm.expect(conn, `POI[${i}].Connections[${j}] missing ConnectionTypeID`).to.have.property('ConnectionTypeID');",
+                  "        });",
+                  "    });",
+                  "});"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/poi/?output=json&latitude={{lat}}&longitude={{lng}}&distance={{distance}}&distanceunit=KM&maxresults={{maxresults}}&key={{apiKey}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "poi",
+                ""
+              ],
+              "query": [
+                {
+                  "key": "output",
+                  "value": "json"
+                },
+                {
+                  "key": "latitude",
+                  "value": "{{lat}}"
+                },
+                {
+                  "key": "longitude",
+                  "value": "{{lng}}"
+                },
+                {
+                  "key": "distance",
+                  "value": "{{distance}}"
+                },
+                {
+                  "key": "distanceunit",
+                  "value": "KM"
+                },
+                {
+                  "key": "maxresults",
+                  "value": "{{maxresults}}"
+                },
+                {
+                  "key": "key",
+                  "value": "{{apiKey}}"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "POI-07 – Business logic: maxresults is respected",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test('POI-01 | Status code is 200', function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});",
+                  "",
+                  "pm.test('POI-07 | Result count does not exceed maxresults', function () {",
+                  "    const pois = pm.response.json();",
+                  "    const maxresults = parseInt(pm.environment.get('maxresults') || pm.collectionVariables.get('maxresults'), 10);",
+                  "    pm.expect(pois.length).to.be.at.most(maxresults);",
+                  "});"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/poi/?output=json&latitude={{lat}}&longitude={{lng}}&distance={{distance}}&distanceunit=KM&maxresults={{maxresults}}&key={{apiKey}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "poi",
+                ""
+              ],
+              "query": [
+                {
+                  "key": "output",
+                  "value": "json"
+                },
+                {
+                  "key": "latitude",
+                  "value": "{{lat}}"
+                },
+                {
+                  "key": "longitude",
+                  "value": "{{lng}}"
+                },
+                {
+                  "key": "distance",
+                  "value": "{{distance}}"
+                },
+                {
+                  "key": "distanceunit",
+                  "value": "KM"
+                },
+                {
+                  "key": "maxresults",
+                  "value": "{{maxresults}}"
+                },
+                {
+                  "key": "key",
+                  "value": "{{apiKey}}"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "POI-08 – Business logic: coordinates are within search radius",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test('POI-01 | Status code is 200', function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});",
+                  "",
+                  "// Haversine distance check – every POI returned must be within the requested radius of the search origin.",
+                  "function haversineKm(lat1, lon1, lat2, lon2) {",
+                  "    const R = 6371;",
+                  "    const dLat = (lat2 - lat1) * Math.PI / 180;",
+                  "    const dLon = (lon2 - lon1) * Math.PI / 180;",
+                  "    const a = Math.sin(dLat / 2) * Math.sin(dLat / 2) +",
+                  "              Math.cos(lat1 * Math.PI / 180) * Math.cos(lat2 * Math.PI / 180) *",
+                  "              Math.sin(dLon / 2) * Math.sin(dLon / 2);",
+                  "    return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));",
+                  "}",
+                  "",
+                  "pm.test('POI-08 | All POIs are within the requested search radius', function () {",
+                  "    const pois    = pm.response.json();",
+                  "    const srcLat  = parseFloat(pm.environment.get('lat')  || pm.collectionVariables.get('lat'));",
+                  "    const srcLng  = parseFloat(pm.environment.get('lng')  || pm.collectionVariables.get('lng'));",
+                  "    const radiusKm = parseFloat(pm.environment.get('distance') || pm.collectionVariables.get('distance'));",
+                  "    // Allow 5 % tolerance for floating-point and projection edge cases",
+                  "    const toleranceKm = radiusKm * 1.05;",
+                  "",
+                  "    pois.forEach(function (poi, i) {",
+                  "        const addr = poi.AddressInfo;",
+                  "        if (addr && addr.Latitude != null && addr.Longitude != null) {",
+                  "            const dist = haversineKm(srcLat, srcLng, addr.Latitude, addr.Longitude);",
+                  "            pm.expect(dist, `POI[${i}] (ID ${poi.ID}) is ${dist.toFixed(2)} km away – exceeds radius`)",
+                  "                .to.be.at.most(toleranceKm);",
+                  "        }",
+                  "    });",
+                  "});"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/poi/?output=json&latitude={{lat}}&longitude={{lng}}&distance={{distance}}&distanceunit=KM&maxresults={{maxresults}}&key={{apiKey}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "poi",
+                ""
+              ],
+              "query": [
+                {
+                  "key": "output",
+                  "value": "json"
+                },
+                {
+                  "key": "latitude",
+                  "value": "{{lat}}"
+                },
+                {
+                  "key": "longitude",
+                  "value": "{{lng}}"
+                },
+                {
+                  "key": "distance",
+                  "value": "{{distance}}"
+                },
+                {
+                  "key": "distanceunit",
+                  "value": "KM"
+                },
+                {
+                  "key": "maxresults",
+                  "value": "{{maxresults}}"
+                },
+                {
+                  "key": "key",
+                  "value": "{{apiKey}}"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "POI-09 – Business logic: countrycode filter is respected",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test('POI-01 | Status code is 200', function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});",
+                  "",
+                  "pm.test('POI-09 | All POIs belong to the requested country', function () {",
+                  "    const pois = pm.response.json();",
+                  "    const expectedCode = (pm.environment.get('countrycode') || pm.collectionVariables.get('countrycode') || '').toUpperCase();",
+                  "    if (!expectedCode) { return; } // skip if not filtered",
+                  "",
+                  "    pois.forEach(function (poi, i) {",
+                  "        const country = poi.AddressInfo && poi.AddressInfo.Country;",
+                  "        if (country && country.ISOCode) {",
+                  "            pm.expect(",
+                  "                country.ISOCode.toUpperCase(),",
+                  "                `POI[${i}] (ID ${poi.ID}) has country '${country.ISOCode}', expected '${expectedCode}'`",
+                  "            ).to.equal(expectedCode);",
+                  "        }",
+                  "    });",
+                  "});"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/poi/?output=json&countrycode={{countrycode}}&maxresults={{maxresults}}&key={{apiKey}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "poi",
+                ""
+              ],
+              "query": [
+                {
+                  "key": "output",
+                  "value": "json"
+                },
+                {
+                  "key": "countrycode",
+                  "value": "{{countrycode}}"
+                },
+                {
+                  "key": "maxresults",
+                  "value": "{{maxresults}}"
+                },
+                {
+                  "key": "key",
+                  "value": "{{apiKey}}"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "POI-10 – Business logic: IDs are unique",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test('POI-01 | Status code is 200', function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});",
+                  "",
+                  "pm.test('POI-10 | No duplicate POI IDs in response', function () {",
+                  "    const pois = pm.response.json();",
+                  "    const ids  = pois.map(p => p.ID);",
+                  "    const unique = new Set(ids);",
+                  "    pm.expect(unique.size, `Duplicate IDs found: ${ids.filter((id, i) => ids.indexOf(id) !== i)}`)",
+                  "        .to.equal(ids.length);",
+                  "});"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/poi/?output=json&latitude={{lat}}&longitude={{lng}}&distance={{distance}}&distanceunit=KM&maxresults={{maxresults}}&key={{apiKey}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "poi",
+                ""
+              ],
+              "query": [
+                {
+                  "key": "output",
+                  "value": "json"
+                },
+                {
+                  "key": "latitude",
+                  "value": "{{lat}}"
+                },
+                {
+                  "key": "longitude",
+                  "value": "{{lng}}"
+                },
+                {
+                  "key": "distance",
+                  "value": "{{distance}}"
+                },
+                {
+                  "key": "distanceunit",
+                  "value": "KM"
+                },
+                {
+                  "key": "maxresults",
+                  "value": "{{maxresults}}"
+                },
+                {
+                  "key": "key",
+                  "value": "{{apiKey}}"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "POI-11 – Business logic: latitude and longitude are valid ranges",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test('POI-01 | Status code is 200', function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});",
+                  "",
+                  "pm.test('POI-11 | All POI coordinates are within valid geographic ranges', function () {",
+                  "    const pois = pm.response.json();",
+                  "    pm.expect(pois).to.be.an('array').that.is.not.empty;",
+                  "",
+                  "    pois.forEach(function (poi, i) {",
+                  "        const addr = poi.AddressInfo;",
+                  "        if (addr && addr.Latitude != null && addr.Longitude != null) {",
+                  "            pm.expect(addr.Latitude,  `POI[${i}] Latitude out of range`).to.be.within(-90, 90);",
+                  "            pm.expect(addr.Longitude, `POI[${i}] Longitude out of range`).to.be.within(-180, 180);",
+                  "        }",
+                  "    });",
+                  "});"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/poi/?output=json&latitude={{lat}}&longitude={{lng}}&distance={{distance}}&distanceunit=KM&maxresults={{maxresults}}&key={{apiKey}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "poi",
+                ""
+              ],
+              "query": [
+                {
+                  "key": "output",
+                  "value": "json"
+                },
+                {
+                  "key": "latitude",
+                  "value": "{{lat}}"
+                },
+                {
+                  "key": "longitude",
+                  "value": "{{lng}}"
+                },
+                {
+                  "key": "distance",
+                  "value": "{{distance}}"
+                },
+                {
+                  "key": "distanceunit",
+                  "value": "KM"
+                },
+                {
+                  "key": "maxresults",
+                  "value": "{{maxresults}}"
+                },
+                {
+                  "key": "key",
+                  "value": "{{apiKey}}"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "POI-12 – Negative: missing API key returns 401",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test('POI-12 | Request without API key is rejected (401)', function () {",
+                  "    pm.response.to.have.status(401);",
+                  "});",
+                  "",
+                  "pm.test(\"Body contains expected text\", function () {",
+                  "    pm.expect(pm.response.text()).to.include(\"You must specify an API key using the key query parameter or x-api-key header.\");",
+                  "});"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            },
+            {
+              "listen": "prerequest",
+              "script": {
+                "packages": {},
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/poi/?output=json&latitude={{lat}}&longitude={{lng}}&maxresults=5",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "poi",
+                ""
+              ],
+              "query": [
+                {
+                  "key": "output",
+                  "value": "json"
+                },
+                {
+                  "key": "latitude",
+                  "value": "{{lat}}"
+                },
+                {
+                  "key": "longitude",
+                  "value": "{{lng}}"
+                },
+                {
+                  "key": "maxresults",
+                  "value": "5"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "POI-13 – Negative: invalid coordinates return empty array",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test('POI-01 | Status code is 200', function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});",
+                  "",
+                  "// Coordinates in the middle of the ocean should yield 0 results.",
+                  "pm.test('POI-13 | Remote ocean coordinates return empty result set', function () {",
+                  "    const pois = pm.response.json();",
+                  "    pm.expect(pois).to.be.an('array');",
+                  "    pm.expect(pois.length, 'Expected 0 results for remote ocean coords').to.equal(0);",
+                  "});",
+                  "",
+                  ""
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/poi/?output=json&maxresults=10&key={{apiKey}}&boundingbox=(36.48167842797304,-125.59809523429794),(37.44753807403066,-124.47514042302987)",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "poi",
+                ""
+              ],
+              "query": [
+                {
+                  "key": "output",
+                  "value": "json"
+                },
+                {
+                  "key": "latitude",
+                  "value": "0.0",
+                  "disabled": true
+                },
+                {
+                  "key": "longitude",
+                  "value": "0.0",
+                  "disabled": true
+                },
+                {
+                  "key": "distance",
+                  "value": "1",
+                  "disabled": true
+                },
+                {
+                  "key": "distanceunit",
+                  "value": "KM",
+                  "disabled": true
+                },
+                {
+                  "key": "maxresults",
+                  "value": "10"
+                },
+                {
+                  "key": "key",
+                  "value": "{{apiKey}}"
+                },
+                {
+                  "key": "boundingbox",
+                  "value": "(36.48167842797304,-125.59809523429794),(37.44753807403066,-124.47514042302987)"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Reference Data – GET /referencedata/",
+      "item": [
+        {
+          "name": "REF-01 – Status code is 200",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test('REF-01 | Status code is 200', function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/referencedata/?key={{apiKey}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "referencedata",
+                ""
+              ],
+              "query": [
+                {
+                  "key": "key",
+                  "value": "{{apiKey}}"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "REF-02 – Response time under 1000 ms",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test('REF-01 | Status code is 200', function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});",
+                  "",
+                  "pm.test('REF-02 | Response time is under 1000ms', function () {",
+                  "    pm.expect(pm.response.responseTime).to.be.below(1000);",
+                  "});"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/referencedata/?key={{apiKey}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "referencedata",
+                ""
+              ],
+              "query": [
+                {
+                  "key": "key",
+                  "value": "{{apiKey}}"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "REF-03 – Response is a JSON object",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test('REF-01 | Status code is 200', function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});",
+                  "",
+                  "pm.test('REF-03 | Response body is a JSON object', function () {",
+                  "    const body = pm.response.json();",
+                  "    pm.expect(body).to.be.an('object').and.not.an('array');",
+                  "});"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/referencedata/?key={{apiKey}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "referencedata",
+                ""
+              ],
+              "query": [
+                {
+                  "key": "key",
+                  "value": "{{apiKey}}"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "REF-04 – Schema: required top-level keys present",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test('REF-01 | Status code is 200', function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});",
+                  "",
+                  "// CoreReferenceData schema per OCM OpenAPI spec.",
+                  "pm.test('REF-04 | All required top-level reference data keys are present', function () {",
+                  "    const ref = pm.response.json();",
+                  "    const required = [",
+                  "        'ConnectionTypes',",
+                  "        'Countries',",
+                  "        'Operators',",
+                  "        'StatusTypes',",
+                  "        'SubmissionStatusTypes',",
+                  "        'UsageTypes',",
+                  "        'UserCommentTypes',",
+                  "        'ChargerTypes',",
+                  "        'CurrentTypes',",
+                  "        'DataProviders'",
+                  "    ];",
+                  "    required.forEach(function (key) {",
+                  "        pm.expect(ref, `Missing key: '${key}'`).to.have.property(key);",
+                  "    });",
+                  "});"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/referencedata/?key={{apiKey}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "referencedata",
+                ""
+              ],
+              "query": [
+                {
+                  "key": "key",
+                  "value": "{{apiKey}}"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "REF-05 – Schema: all top-level values are arrays",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test('REF-01 | Status code is 200', function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});",
+                  "",
+                  "pm.test('REF-05 | All reference data values are non-empty arrays', function () {",
+                  "    const ref = pm.response.json();",
+                  "    const keys = [",
+                  "        'ConnectionTypes', 'Countries', 'Operators', 'StatusTypes',",
+                  "        'SubmissionStatusTypes', 'UsageTypes', 'UserCommentTypes',",
+                  "        'ChargerTypes', 'CurrentTypes', 'DataProviders'",
+                  "    ];",
+                  "    keys.forEach(function (key) {",
+                  "        if (ref[key] !== undefined) {",
+                  "            pm.expect(ref[key], `'${key}' should be an array`).to.be.an('array');",
+                  "            pm.expect(ref[key].length, `'${key}' should not be empty`).to.be.above(0);",
+                  "        }",
+                  "    });",
+                  "});"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/referencedata/?key={{apiKey}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "referencedata",
+                ""
+              ],
+              "query": [
+                {
+                  "key": "key",
+                  "value": "{{apiKey}}"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "REF-06 – Schema: ConnectionType items have ID and Title",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test('REF-01 | Status code is 200', function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});",
+                  "",
+                  "pm.test('REF-06 | Each ConnectionType has ID and Title fields', function () {",
+                  "    const ref = pm.response.json();",
+                  "    pm.expect(ref.ConnectionTypes).to.be.an('array').that.is.not.empty;",
+                  "",
+                  "    ref.ConnectionTypes.forEach(function (ct, i) {",
+                  "        pm.expect(ct, `ConnectionTypes[${i}] missing ID`).to.have.property('ID');",
+                  "        pm.expect(ct.ID).to.be.a('number');",
+                  "        // Title is labelled as 'Title' or the generic 'description' field in spec",
+                  "        const hasTitle = ct.hasOwnProperty('Title') || ct.hasOwnProperty('description');",
+                  "        pm.expect(hasTitle, `ConnectionTypes[${i}] missing Title or description`).to.be.true;",
+                  "    });",
+                  "});"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/referencedata/?key={{apiKey}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "referencedata",
+                ""
+              ],
+              "query": [
+                {
+                  "key": "key",
+                  "value": "{{apiKey}}"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "REF-07 – Schema: Country items have ISOCode and ID",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test('REF-01 | Status code is 200', function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});",
+                  "",
+                  "pm.test('REF-07 | Each Country has ID and ISOCode', function () {",
+                  "    const ref = pm.response.json();",
+                  "    pm.expect(ref.Countries).to.be.an('array').that.is.not.empty;",
+                  "",
+                  "    ref.Countries.forEach(function (c, i) {",
+                  "        pm.expect(c, `Countries[${i}] missing ID`).to.have.property('ID');",
+                  "        pm.expect(c, `Countries[${i}] missing ISOCode`).to.have.property('ISOCode');",
+                  "        pm.expect(c.ISOCode).to.be.a('string').with.length(2);",
+                  "    });",
+                  "});"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/referencedata/?key={{apiKey}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "referencedata",
+                ""
+              ],
+              "query": [
+                {
+                  "key": "key",
+                  "value": "{{apiKey}}"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "REF-08 – Business logic: IDs are unique within each list",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test('REF-01 | Status code is 200', function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});",
+                  "",
+                  "pm.test('REF-08 | IDs are unique within each reference list', function () {",
+                  "    const ref = pm.response.json();",
+                  "    const lists = ['ConnectionTypes', 'Countries', 'Operators', 'StatusTypes', 'CurrentTypes'];",
+                  "",
+                  "    lists.forEach(function (listName) {",
+                  "        if (!ref[listName]) return;",
+                  "        const ids = ref[listName].map(item => item.ID);",
+                  "        const unique = new Set(ids);",
+                  "        pm.expect(unique.size, `Duplicate IDs in ${listName}`).to.equal(ids.length);",
+                  "    });",
+                  "});"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/referencedata/?key={{apiKey}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "referencedata",
+                ""
+              ],
+              "query": [
+                {
+                  "key": "key",
+                  "value": "{{apiKey}}"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "REF-09 – Business logic: country ISOCodes are 2-character strings",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test('REF-01 | Status code is 200', function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});",
+                  "",
+                  "pm.test('REF-09 | All country ISOCodes are valid 2-character strings', function () {",
+                  "    const ref = pm.response.json();",
+                  "    pm.expect(ref.Countries).to.be.an('array').that.is.not.empty;",
+                  "",
+                  "    ref.Countries.forEach(function (c, i) {",
+                  "        pm.expect(",
+                  "            c.ISOCode,",
+                  "            `Countries[${i}] ISOCode '${c.ISOCode}' is not 2 chars`",
+                  "        ).to.match(/^[A-Z]{2}$/);",
+                  "    });",
+                  "});"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/referencedata/?key={{apiKey}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "referencedata",
+                ""
+              ],
+              "query": [
+                {
+                  "key": "key",
+                  "value": "{{apiKey}}"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "REF-10 – Business logic: StatusTypes contain operational status",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test('REF-01 | Status code is 200', function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});",
+                  "",
+                  "// The OCM spec defines that StatusTypes must include at least one entry with IsOperational=true for the POI scan flow to be meaningful.",
+                  "pm.test('REF-10 | At least one StatusType is marked as operational', function () {",
+                  "    const ref = pm.response.json();",
+                  "    pm.expect(ref.StatusTypes).to.be.an('array').that.is.not.empty;",
+                  "",
+                  "    const hasOperational = ref.StatusTypes.some(function (s) {",
+                  "        return s.IsOperational === true;",
+                  "    });",
+                  "    pm.expect(hasOperational, 'No operational StatusType found').to.be.true;",
+                  "});"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/referencedata/?key={{apiKey}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "referencedata",
+                ""
+              ],
+              "query": [
+                {
+                  "key": "key",
+                  "value": "{{apiKey}}"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "REF-11 – Business logic: ConnectionType IDs align with POI data",
+          "event": [
+            {
+              "listen": "prequest",
+              "script": {
+                "exec": [
+                  "// Step 1 of 2: fetch a sample POI set and store ConnectionTypeIDs.",
+                  "// Step 2 runs in the test script below once referencedata/ responds.",
+                  "const apiKey = pm.environment.get('apiKey') || pm.collectionVariables.get('apiKey');",
+                  "const lat    = pm.environment.get('lat')    || pm.collectionVariables.get('lat');",
+                  "const lng    = pm.environment.get('lng')    || pm.collectionVariables.get('lng');",
+                  "",
+                  "pm.sendRequest(",
+                  "    `https://api.openchargemap.io/v3/poi/?output=json&latitude=${lat}&longitude=${lng}&distance=10&distanceunit=KM&maxresults=20&key=${apiKey}`,",
+                  "    function (err, res) {",
+                  "        if (!err && res.code === 200) {",
+                  "            const pois = res.json();",
+                  "            const ids  = new Set();",
+                  "            pois.forEach(poi => (poi.Connections || []).forEach(c => {",
+                  "                if (c.ConnectionTypeID != null) ids.add(c.ConnectionTypeID);",
+                  "            }));",
+                  "            pm.environment.set('_poiConnectionTypeIDs', JSON.stringify([...ids]));",
+                  "        }",
+                  "    }",
+                  ");"
+                ],
+                "type": "text/javascript"
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test('REF-01 | Status code is 200', function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});",
+                  "",
+                  "pm.test('REF-11 | ConnectionTypeIDs used in POIs all exist in reference data', function () {",
+                  "    const raw = pm.environment.get('_poiConnectionTypeIDs');",
+                  "    if (!raw) { pm.expect.fail('Pre-request fetch did not return POI data'); }",
+                  "",
+                  "    const poiIds  = JSON.parse(raw);",
+                  "    const ref     = pm.response.json();",
+                  "    const refIds  = new Set((ref.ConnectionTypes || []).map(c => c.ID));",
+                  "",
+                  "    poiIds.forEach(function (id) {",
+                  "        pm.expect(refIds.has(id), `ConnectionTypeID ${id} from POI not found in reference data`).to.be.true;",
+                  "    });",
+                  "",
+                  "    pm.environment.unset('_poiConnectionTypeIDs');",
+                  "});"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/referencedata/?key={{apiKey}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "referencedata",
+                ""
+              ],
+              "query": [
+                {
+                  "key": "key",
+                  "value": "{{apiKey}}"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "REF-12 – Negative: missing API key returns 401",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test('REF-12 | Request without API key is rejected (401)', function () {",
+                  "    pm.response.to.have.status(401);",
+                  "});",
+                  "",
+                  "pm.test(\"Body contains expected text\", function () {",
+                  "    pm.expect(pm.response.text()).to.include(\"You must specify an API key using the key query parameter or x-api-key header.\");",
+                  "});"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/referencedata/",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "referencedata",
+                ""
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          "pm.test('POI-02 / REF-02 | Response time is under 1000ms', function () {\r",
+          "    pm.expect(pm.response.responseTime).to.be.below(1000);\r",
+          "});"
+        ]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://api.openchargemap.io/v3"
+    }
+  ]
+}
