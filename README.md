@@ -3,6 +3,19 @@
 
 ---
 
+## Table of Contents
+
+- [Overview](#overview)
+- [Repository Structure](#repository-structure)
+- [Part 1 — System Journeys and Architecture](#part-1--system-journeys-and-architecture)
+- [Part 2 — API Testing + Automation](#part-2--api-testing--automation)
+- [Part 3 — Manual Testing](#part-3--manual-testing)
+- [How to Run the API Tests (Quick Start)](#how-to-run-the-api-tests-quick-start)
+- [Getting an API Key](#getting-an-api-key)
+- [Tech Stack](#tech-stack)
+
+---
+
 ## Overview
 
 This repository contains the complete submission for the Oppizi QA Engineering technical assessment. It covers system architecture diagrams, API test automation, and a manual test suite across three parts.
