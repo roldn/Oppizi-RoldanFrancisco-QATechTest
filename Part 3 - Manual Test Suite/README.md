@@ -1,5 +1,17 @@
 # Oppizi – Part 3: Manual Test Suite
 ## Route Conflict Detection & Reassignment Auditing
+---
+
+## Table of Contents
+
+- [Contents](#contents)
+- [How to Open](#how-to-open)
+- [Document Structure](#document-structure)
+- [Test Case Summary](#test-case-summary)
+- [Test Environment Requirements](#test-environment-requirements)
+- [Execution Order](#execution-order)
+- [Audit Verification Quick Reference](#audit-verification-quick-reference)
+- [Related Deliverables](#related-deliverables)
 
 ---
 
