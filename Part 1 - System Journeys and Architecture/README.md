@@ -3,6 +3,21 @@
 
 ---
 
+## Table of Contents
+
+- [What's in this folder?](#whats-in-this-folder)
+- [What does the .drawio file contain?](#what-does-the-drawio-file-contain)
+  - [Diagram 1 — Journey 1: Campaign Creation](#diagram-1--journey-1-campaign-creation)
+  - [Diagram 2 — Journey 2: Agent Flyer Scan](#diagram-2--journey-2-agent-flyer-scan)
+  - [Diagram 3 — Component Interaction Overview](#diagram-3--component-interaction-overview)
+- [How to open and edit the file](#how-to-open-and-edit-the-file)
+- [Navigating between diagrams](#navigating-between-diagrams)
+- [Visual conventions](#visual-conventions)
+- [Integration test checkpoints](#integration-test-checkpoints)
+- [Exporting the diagrams](#exporting-the-diagrams)
+
+---
+
 ## What's in this folder?
 
 ```
